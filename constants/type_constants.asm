@@ -12,6 +12,7 @@ DEF PHYSICAL EQU const_value
         const BUG          ; $07
         const GHOST        ; $08
         const STEEL        ; $09
+        const TYPELESS     ; $10
 
 DEF UNUSED_TYPES EQU const_value
         const_next 20

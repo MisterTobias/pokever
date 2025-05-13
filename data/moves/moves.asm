@@ -18,7 +18,7 @@ Moves:
 	move MEGA_PUNCH,   NO_ADDITIONAL_EFFECT,        80, NORMAL,        85, 20 ;done
 	move PAY_DAY,      PAY_DAY_EFFECT,              40, NORMAL,       100, 20 ;done
 	move FIRE_PUNCH,   BURN_SIDE_EFFECT1,           75, FIRE,         100, 15 ;check effect, done
-	move ICE_PUNCH,    FREEZE_SIDE_EFFECT,          75, ICE,          100, 15 ;check effect?
+	move ICE_PUNCH,    FREEZE_SIDE_EFFECT,          75, ICE,          100, 15 ;check effect? I think so
 	move THUNDERPUNCH, PARALYZE_SIDE_EFFECT1,       75, ELECTRIC,     100, 15 ;check effect, done
 	move SCRATCH,      NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 35 ;done
 	move VICEGRIP,     NO_ADDITIONAL_EFFECT,        55, NORMAL,       100, 30 ;done
@@ -51,129 +51,129 @@ Moves:
 	move DOUBLE_EDGE,  RECOIL_EFFECT,              120, NORMAL,       100, 15	;done
 	move TAIL_WHIP,    DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30	;done
 	move POISON_STING, POISON_SIDE_EFFECT1,         15, POISON,       100, 35	;done
-	move TWINEEDLE,    TWINEEDLE_EFFECT,            25, BUG,          100, 20	;done, needs testing
-	move PIN_MISSILE,  TWO_TO_FIVE_ATTACKS_EFFECT,  25, BUG,           95, 20
-	move LEER,         DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30
-	move BITE,         FLINCH_SIDE_EFFECT2,         60, DARK,         100, 25
-	move GROWL,        ATTACK_DOWN1_EFFECT,          0, NORMAL,       100, 40
-	move ROAR,         SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,       100, 20
-	move SING,         SLEEP_EFFECT,                 0, NORMAL,        55, 15
-	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,        55, 20
-	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, NORMAL,        90, 20
-	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,       100, 20
-	move ACID,         DEFENSE_DOWN_SIDE_EFFECT,    40, POISON,       100, 30
-	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25
-	move FLAMETHROWER, BURN_SIDE_EFFECT1,           90, FIRE,         100, 15
-	move MIST,         MIST_EFFECT,                  0, ICE,          100, 30
-	move WATER_GUN,    NO_ADDITIONAL_EFFECT,        40, WATER,        100, 25
-	move HYDRO_PUMP,   NO_ADDITIONAL_EFFECT,       110, WATER,         80,  5
-	move SURF,         NO_ADDITIONAL_EFFECT,        90, WATER,        100, 15
-	move ICE_BEAM,     FREEZE_SIDE_EFFECT,          90, ICE,          100, 10
-	move BLIZZARD,     FREEZE_SIDE_EFFECT,         110, ICE,           70,  5
-	move PSYBEAM,      CONFUSION_SIDE_EFFECT,       65, PSYCHIC_TYPE, 100, 20
-	move BUBBLEBEAM,   SPEED_DOWN_SIDE_EFFECT,      65, WATER,        100, 20
-	move AURORA_BEAM,  ATTACK_DOWN_SIDE_EFFECT,     65, ICE,          100, 20
-	move HYPER_BEAM,   HYPER_BEAM_EFFECT,          150, NORMAL,        90,  5
-	move PECK,         NO_ADDITIONAL_EFFECT,        35, FLYING,       100, 35
-	move DRILL_PECK,   NO_ADDITIONAL_EFFECT,        80, FLYING,       100, 20
-	move SUBMISSION,   RECOIL_EFFECT,               80, FIGHTING,      80, 20
-	move LOW_KICK,     NO_ADDITIONAL_EFFECT,       100, FIGHTING,      80,  5
-	move COUNTER,      NO_ADDITIONAL_EFFECT,         1, FIGHTING,     100, 20
-	move SEISMIC_TOSS, SPECIAL_DAMAGE_EFFECT,        1, FIGHTING,     100, 20
-	move STRENGTH,     NO_ADDITIONAL_EFFECT,        80, NORMAL,       100, 15
-	move ABSORB,       DRAIN_HP_EFFECT,             40, GRASS,        100, 15
-	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             75, GRASS,        100, 10
-	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,         90, 10
-	move GROWTH,       SPECIAL_UP1_EFFECT,           0, NORMAL,       100, 40
-	move RAZOR_LEAF,   NO_ADDITIONAL_EFFECT,        55, GRASS,         95, 25
-	move SOLARBEAM,    CHARGE_EFFECT,              200, GRASS,        100, 10
-	move POISONPOWDER, POISON_EFFECT,                0, POISON,        75, 35
-	move STUN_SPORE,   PARALYZE_EFFECT,              0, GRASS,         75, 30
-	move SLEEP_POWDER, SLEEP_EFFECT,                 0, GRASS,         75, 15
-	move PETAL_DANCE,  THRASH_PETAL_DANCE_EFFECT,  120, GRASS,        100, 10
-	move STRING_SHOT,  SPEED_DOWN1_EFFECT,           0, BUG,           95, 40
-	move DRAGON_RAGE,  SPECIAL_DAMAGE_EFFECT,        1, DRAGON,       100, 10
-	move FIRE_SPIN,    TRAPPING_EFFECT,             35, FIRE,          85, 15
-	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT1,       40, ELECTRIC,     100, 30
-	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT1,       90, ELECTRIC,     100, 15
-	move THUNDER_WAVE, PARALYZE_EFFECT,              0, ELECTRIC,      90, 20
-	move THUNDER,      PARALYZE_SIDE_EFFECT2,      110, ELECTRIC,      70, 10
-	move ROCK_THROW,   NO_ADDITIONAL_EFFECT,        50, ROCK,          65, 15
-	move EARTHQUAKE,   NO_ADDITIONAL_EFFECT,       100, GROUND,       100, 10
-	move FISSURE,      OHKO_EFFECT,                  1, GROUND,        30,  5
-	move DIG,          CHARGE_EFFECT,              100, GROUND,       100, 10
-	move TOXIC,        POISON_EFFECT,                0, POISON,        85, 10
-	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, 100, 25
-	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 10
-	move HYPNOSIS,     SLEEP_EFFECT,                 0, PSYCHIC_TYPE,  60, 20
-	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, 100, 40
-	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, 100, 30
-	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 30
-	move RAGE,         RAGE_EFFECT,                 20, NORMAL,       100, 20
-	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, 100, 20
-	move NIGHT_SHADE,  SPECIAL_DAMAGE_EFFECT,        0, GHOST,        100, 15
-	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10
-	move SCREECH,      DEFENSE_DOWN2_EFFECT,         0, NORMAL,        85, 40
-	move DOUBLE_TEAM,  EVASION_UP1_EFFECT,           0, NORMAL,       100, 15
-	move RECOVER,      HEAL_EFFECT,                  0, NORMAL,       100, 20
-	move HARDEN,       DEFENSE_UP1_EFFECT,           0, NORMAL,       100, 30
-	move MINIMIZE,     EVASION_UP1_EFFECT,           0, NORMAL,       100, 20
-	move SMOKESCREEN,  ACCURACY_DOWN1_EFFECT,        0, NORMAL,       100, 20
-	move CONFUSE_RAY,  CONFUSION_EFFECT,             0, GHOST,        100, 10
-	move WITHDRAW,     DEFENSE_UP1_EFFECT,           0, WATER,        100, 40
-	move DEFENSE_CURL, DEFENSE_UP1_EFFECT,           0, NORMAL,       100, 40
-	move BARRIER,      DEFENSE_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 30
-	move LIGHT_SCREEN, LIGHT_SCREEN_EFFECT,          0, PSYCHIC_TYPE, 100, 30
-	move HAZE,         HAZE_EFFECT,                  0, ICE,          100, 30
-	move REFLECT,      REFLECT_EFFECT,               0, PSYCHIC_TYPE, 100, 20
-	move FOCUS_ENERGY, FOCUS_ENERGY_EFFECT,          0, NORMAL,       100, 30
-	move BIDE,         BIDE_EFFECT,                  0, NORMAL,       100, 10
-	move METRONOME,    METRONOME_EFFECT,             0, NORMAL,       100, 10
-	move MIRROR_MOVE,  MIRROR_MOVE_EFFECT,           0, FLYING,       100, 20
-	move SELFDESTRUCT, EXPLODE_EFFECT,             130, NORMAL,       100,  5
-	move EGG_BOMB,     NO_ADDITIONAL_EFFECT,       100, NORMAL,        75, 10
-	move LICK,         PARALYZE_SIDE_EFFECT2,       20, GHOST,        100, 30
-	move SMOG,         POISON_SIDE_EFFECT2,         20, POISON,        70, 20
-	move SLUDGE,       POISON_SIDE_EFFECT2,         65, POISON,       100, 20
-	move BONE_CLUB,    FLINCH_SIDE_EFFECT1,         65, GROUND,        85, 20
-	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          120, FIRE,          85,  5
-	move WATERFALL,    NO_ADDITIONAL_EFFECT,        80, WATER,        100, 15
-	move CLAMP,        TRAPPING_EFFECT,             35, WATER,         75, 10
-	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       100, 20
-	move SKULL_BASH,   CHARGE_EFFECT,              100, NORMAL,       100, 15
-	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15
-	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      10, NORMAL,       100, 35
-	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 20
-	move KINESIS,      ACCURACY_DOWN1_EFFECT,        0, PSYCHIC_TYPE,  80, 15
-	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10
-	move HI_JUMP_KICK, JUMP_KICK_EFFECT,            85, FIGHTING,      90, 20
-	move GLARE,        PARALYZE_EFFECT,              0, NORMAL,        75, 30
-	move DREAM_EATER,  DREAM_EATER_EFFECT,         100, PSYCHIC_TYPE, 100, 15
-	move POISON_GAS,   POISON_EFFECT,                0, POISON,        55, 40
-	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  15, NORMAL,        85, 20
-	move LEECH_LIFE,   DRAIN_HP_EFFECT,             20, BUG,          100, 15
-	move LOVELY_KISS,  SLEEP_EFFECT,                 0, NORMAL,        75, 10
-	move SKY_ATTACK,   CHARGE_EFFECT,              140, FLYING,        90,  5
-	move TRANSFORM,    TRANSFORM_EFFECT,             0, NORMAL,       100, 10
-	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      20, WATER,        100, 30
-	move DIZZY_PUNCH,  NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 10
-	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        100, 15
-	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,        70, 20
-	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE,  80, 15
-	move SPLASH,       SPLASH_EFFECT,                0, NORMAL,       100, 40
-	move ACID_ARMOR,   DEFENSE_UP2_EFFECT,           0, POISON,       100, 40
-	move CRABHAMMER,   NO_ADDITIONAL_EFFECT,        90, WATER,         85, 10
-	move EXPLOSION,    EXPLODE_EFFECT,             170, NORMAL,       100,  5
-	move FURY_SWIPES,  TWO_TO_FIVE_ATTACKS_EFFECT,  18, NORMAL,        80, 15
-	move BONEMERANG,   ATTACK_TWICE_EFFECT,         50, GROUND,        90, 10
-	move REST,         HEAL_EFFECT,                  0, PSYCHIC_TYPE, 100, 10
-	move ROCK_SLIDE,   NO_ADDITIONAL_EFFECT,        75, ROCK,          90, 10
-	move HYPER_FANG,   FLINCH_SIDE_EFFECT1,         80, NORMAL,        90, 15
-	move SHARPEN,      ATTACK_UP1_EFFECT,            0, NORMAL,       100, 30
-	move CONVERSION,   CONVERSION_EFFECT,            0, NORMAL,       100, 30
-	move TRI_ATTACK,   NO_ADDITIONAL_EFFECT,        80, NORMAL,       100, 10
-	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,        90, 10
-	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20
-	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10
-	move STRUGGLE,     RECOIL_EFFECT,               50, NORMAL,       100, 10
+	move TWINEEDLE,    TWINEEDLE_EFFECT,            25, BUG,          100, 20 ;done, the way it is coded is weird it uses a word constant to be number 2, 30% chance for now
+	move PIN_MISSILE,  TWO_TO_FIVE_ATTACKS_EFFECT,  25, BUG,           95, 20 ;done
+	move LEER,         DEFENSE_DOWN1_EFFECT,         0, NORMAL,       100, 30 ;done
+	move BITE,         FLINCH_SIDE_EFFECT2,         60, DARK,         100, 25 ;done
+	move GROWL,        ATTACK_DOWN1_EFFECT,          0, NORMAL,       100, 40 ;done
+	move ROAR,         SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,       100, 20 ;priority?
+	move SING,         SLEEP_EFFECT,                 0, NORMAL,        55, 15 ;can affect target using substitute?
+	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,        55, 20 ;done
+	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, NORMAL,        90, 20 ;can hit ghost types?
+	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,       100, 20 ;rework?
+	move ACID,         DEFENSE_DOWN_SIDE_EFFECT,    40, POISON,       100, 30 ;done (should I change to sp.def?)
+	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25 ; done
+	move FLAMETHROWER, BURN_SIDE_EFFECT1,           90, FIRE,         100, 15 ;done
+	move MIST,         MIST_EFFECT,                  0, ICE,          100, 30 ;rework?
+	move WATER_GUN,    NO_ADDITIONAL_EFFECT,        40, WATER,        100, 25 ;done
+	move HYDRO_PUMP,   NO_ADDITIONAL_EFFECT,       110, WATER,         80,  5 ;done
+	move SURF,         NO_ADDITIONAL_EFFECT,        90, WATER,        100, 15 ;done
+	move ICE_BEAM,     FREEZE_SIDE_EFFECT,          90, ICE,          100, 10 ;done
+	move BLIZZARD,     FREEZE_SIDE_EFFECT,         110, ICE,           70,  5 ;done
+	move PSYBEAM,      CONFUSION_SIDE_EFFECT,       65, PSYCHIC_TYPE, 100, 20 ;done
+	move BUBBLEBEAM,   SPEED_DOWN_SIDE_EFFECT,      65, WATER,        100, 20 ;done I think, need to test if really changed to 10%
+	move AURORA_BEAM,  ATTACK_DOWN_SIDE_EFFECT,     65, ICE,          100, 20 ;done
+	move HYPER_BEAM,   HYPER_BEAM_EFFECT,          150, NORMAL,        90,  5 ;done, not changed i think its gen 1 ability of if ko equal no recharge stays
+	move PECK,         NO_ADDITIONAL_EFFECT,        35, FLYING,       100, 35 ;done
+	move DRILL_PECK,   NO_ADDITIONAL_EFFECT,        80, FLYING,       100, 20 ;done
+	move SUBMISSION,   RECOIL_EFFECT,               80, FIGHTING,      80, 20 ;done
+	move LOW_KICK,     NO_ADDITIONAL_EFFECT,       100, FIGHTING,      80,  5 ;done, is now cross chop
+	move COUNTER,      NO_ADDITIONAL_EFFECT,         1, FIGHTING,     100, 20 ;need to add priority
+	move SEISMIC_TOSS, SPECIAL_DAMAGE_EFFECT,        1, FIGHTING,     100, 20 ;done
+	move STRENGTH,     NO_ADDITIONAL_EFFECT,        80, NORMAL,       100, 15 ;done
+	move ABSORB,       DRAIN_HP_EFFECT,             40, GRASS,        100, 15 ;done, is now mega drain
+	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             75, GRASS,        100, 10 ;done, is now giga drain
+	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,         90, 10 ;done
+	move GROWTH,       SPECIAL_UP1_EFFECT,           0, NORMAL,       100, 20 ; need to add atck effect
+	move RAZOR_LEAF,   NO_ADDITIONAL_EFFECT,        55, GRASS,         95, 25 ;done
+	move SOLARBEAM,    CHARGE_EFFECT,              200, GRASS,        100, 10 ; changed it to lets go base power
+	move POISONPOWDER, POISON_EFFECT,                0, POISON,        75, 35 ;done
+	move STUN_SPORE,   PARALYZE_EFFECT,              0, GRASS,         75, 30 ;done
+	move SLEEP_POWDER, SLEEP_EFFECT,                 0, GRASS,         75, 15 ;done
+	move PETAL_DANCE,  THRASH_PETAL_DANCE_EFFECT,  120, GRASS,        100, 10 ;done
+	move STRING_SHOT,  SPEED_DOWN1_EFFECT,           0, BUG,           95, 40 ;done
+	move DRAGON_RAGE,  SPECIAL_DAMAGE_EFFECT,        1, DRAGON,       100, 10 ;done
+	move FIRE_SPIN,    TRAPPING_EFFECT,             35, FIRE,          85, 15 ;done
+	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT1,       40, ELECTRIC,     100, 30 ;done
+	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT1,       90, ELECTRIC,     100, 15 ;done 
+	move THUNDER_WAVE, PARALYZE_EFFECT,              0, ELECTRIC,      90, 20 ;done
+	move THUNDER,      PARALYZE_SIDE_EFFECT2,      110, ELECTRIC,      70, 10 ;done
+	move ROCK_THROW,   NO_ADDITIONAL_EFFECT,        50, ROCK,          90, 15 ;done
+	move EARTHQUAKE,   NO_ADDITIONAL_EFFECT,       100, GROUND,       100, 10 ;done
+	move FISSURE,      OHKO_EFFECT,                  1, GROUND,        30,  5 ;done
+	move DIG,          CHARGE_EFFECT,               80, GROUND,       100, 10 ;done
+	move TOXIC,        POISON_EFFECT,                0, POISON,        90, 10 ;done 
+	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, 100, 25 ;done
+	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 10 ;done (needs some small testing)
+	move HYPNOSIS,     SLEEP_EFFECT,                 0, PSYCHIC_TYPE,  60, 20 ;done
+	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, 100, 40 ;done
+	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, 100, 30 ;done
+	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 30 ;needs priority
+	move RAGE,         RAGE_EFFECT,                 20, NORMAL,       100, 20 ;needs some cheking (is unchanged)
+	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, 100, 20 ;needs some cheking (is unchanged) 
+	move NIGHT_SHADE,  SPECIAL_DAMAGE_EFFECT,        0, GHOST,        100, 15 ;done
+	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       100, 10 ;needs some cheking (is unchanged) 
+	move SCREECH,      DEFENSE_DOWN2_EFFECT,         0, NORMAL,        85, 40 ;done
+	move DOUBLE_TEAM,  EVASION_UP1_EFFECT,           0, NORMAL,       100, 15 ;done
+	move RECOVER,      HEAL_EFFECT,                  0, NORMAL,       100, 10 ;done (need to check if the healing bug is fixed)
+	move HARDEN,       DEFENSE_UP1_EFFECT,           0, NORMAL,       100, 30 ;done
+	move MINIMIZE,     EVASION_UP2_EFFECT,           0, NORMAL,       100, 10 ;done
+	move SMOKESCREEN,  ACCURACY_DOWN1_EFFECT,        0, NORMAL,       100, 20 ;done
+	move CONFUSE_RAY,  CONFUSION_EFFECT,             0, GHOST,        100, 10 ;done
+	move WITHDRAW,     DEFENSE_UP1_EFFECT,           0, WATER,        100, 40 ;done
+	move DEFENSE_CURL, DEFENSE_UP1_EFFECT,           0, NORMAL,       100, 40 ;done
+	move BARRIER,      DEFENSE_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 20 ;done
+	move LIGHT_SCREEN, LIGHT_SCREEN_EFFECT,          0, PSYCHIC_TYPE, 100, 30 ;done (need to add the 5 turn limit)
+	move HAZE,         HAZE_EFFECT,                  0, ICE,          100, 30 ;done (needs the nerf to only affect stat modifiers)
+	move REFLECT,      REFLECT_EFFECT,               0, PSYCHIC_TYPE, 100, 20 ;done (need to add the 5 turn limit)
+	move FOCUS_ENERGY, FOCUS_ENERGY_EFFECT,          0, NORMAL,       100, 30 ;done (needs testing to see if the bug is fixed)
+	move BIDE,         BIDE_EFFECT,                  0, NORMAL,       100, 10 ;done (need to add the new prioriti system)
+	move METRONOME,    METRONOME_EFFECT,             0, NORMAL,       100, 10 ;done
+	move MIRROR_MOVE,  MIRROR_MOVE_EFFECT,           0, FLYING,       100, 20 ;done
+	move SELFDESTRUCT, EXPLODE_EFFECT,             100, NORMAL,       100,  5 ;done (need to test if it will do 200 base pwer damage)
+	move EGG_BOMB,     NO_ADDITIONAL_EFFECT,       100, NORMAL,        75, 10 ;done
+	move LICK,         PARALYZE_SIDE_EFFECT2,       30, GHOST,        100, 30 ;done
+	move SMOG,         POISON_SIDE_EFFECT2,         30, POISON,        70, 20 ;done
+	move SLUDGE,       POISON_SIDE_EFFECT1,         65, POISON,       100, 20 ;done
+	move BONE_CLUB,    FLINCH_SIDE_EFFECT1,         65, GROUND,        85, 20 ;done
+	move FIRE_BLAST,   BURN_SIDE_EFFECT1,          120, FIRE,          85,  5 ;done
+	move WATERFALL,    FLINCH_SIDE_EFFECT1,         80, WATER,        100, 15 ;done (added 10% flinch but the right value is 20%)
+	move CLAMP,        TRAPPING_EFFECT,             35, WATER,         85, 15 ;done
+	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       100, 20 ;done
+	move SKULL_BASH,   CHARGE_EFFECT,              130, NORMAL,       100, 10 ;done (need to add the defense up effect) 
+	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       100, 15 ;done
+	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      10, NORMAL,       100, 35 ;done I think, need to test if really changed to 10%
+	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC_TYPE, 100, 20 ;done, OP af, but checked 
+	move KINESIS,      ACCURACY_DOWN1_EFFECT,        0, PSYCHIC_TYPE,  80, 15 ;done
+	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       100, 10 ;done, need to check if the glitch is fixed
+	move HI_JUMP_KICK, JUMP_KICK_EFFECT,           130, FIGHTING,      90, 10 ;done, need to check the jump kick effect
+	move GLARE,        PARALYZE_EFFECT,              0, NORMAL,       100, 30 ;done
+	move DREAM_EATER,  DREAM_EATER_EFFECT,         100, PSYCHIC_TYPE, 100, 15 ;done
+	move POISON_GAS,   POISON_EFFECT,                0, POISON,        90, 40 ;done (need to check poison)
+	move BARRAGE,      TWO_TO_FIVE_ATTACKS_EFFECT,  15, NORMAL,        85, 20 ;done
+	move LEECH_LIFE,   DRAIN_HP_EFFECT,             80, BUG,          100, 10 ;done
+	move LOVELY_KISS,  SLEEP_EFFECT,                 0, NORMAL,        75, 10 ;done
+	move SKY_ATTACK,   CHARGE_EFFECT,              200, FLYING,        90,  5 ;done (30% of flinch added)
+	move TRANSFORM,    TRANSFORM_EFFECT,             0, NORMAL,       100, 10 ;done
+	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      40, WATER,        100, 30 ;done
+	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       70, NORMAL,       100, 10 ;done (added 10% chance, there isnt a 20% for confusion effect)
+	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        100, 15 ;done
+	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,       100, 20 ;done
+	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE, 100, 15 ;done (need to check if effect is working)
+	move SPLASH,       SPLASH_EFFECT,                0, NORMAL,       100, 40 ;done
+	move ACID_ARMOR,   DEFENSE_UP2_EFFECT,           0, POISON,       100, 20 ;done
+	move CRABHAMMER,   NO_ADDITIONAL_EFFECT,       100, WATER,         95, 10 ;done (is in high crit list?)
+	move EXPLOSION,    EXPLODE_EFFECT,             125, NORMAL,       100,  5 ;done (is halved def working?)
+	move FURY_SWIPES,  TWO_TO_FIVE_ATTACKS_EFFECT,  18, NORMAL,        80, 15 ;done
+	move BONEMERANG,   ATTACK_TWICE_EFFECT,         50, GROUND,        90, 10 ;done
+	move REST,         HEAL_EFFECT,                  0, PSYCHIC_TYPE, 100, 10 ;done (does it turn the user to asleep?)
+	move ROCK_SLIDE,   FLINCH_SIDE_EFFECT2,         75, ROCK,          90, 10 ;done
+	move HYPER_FANG,   FLINCH_SIDE_EFFECT1,         80, NORMAL,        90, 15 ;done
+	move SHARPEN,      ATTACK_UP1_EFFECT,            0, NORMAL,       100, 30 ;done
+	move CONVERSION,   CONVERSION_EFFECT,            0, NORMAL,       100, 30 ;(need to check the effect)
+	move TRI_ATTACK,   NO_ADDITIONAL_EFFECT,        80, NORMAL,       100, 10 ;(need to check the effect)
+	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,        90, 10 ;done
+	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20 ;done
+	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10 ;done (need to test the effect)
+	move STRUGGLE,     RECOIL_EFFECT,               50, TYPELESS,     100, 10 ;done
 	assert_table_length NUM_ATTACKS

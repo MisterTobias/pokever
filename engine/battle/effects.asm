@@ -103,9 +103,6 @@ PoisonEffect:
 	cp POISON_SIDE_EFFECT2
 	ld b, 40 percent + 1 ; chance of poisoning
 	jr z, .sideEffectTest
-	CP TWINEEDLE_POISON_EFFECT
-	ld b, 36 percent + 1 ; chance of poisoning
- jr z,	.sideEffectTest
 	push hl
 	push de
 	call MoveHitTest ; apply accuracy tests
@@ -483,6 +480,10 @@ UpdateStatDone:
 	call nz, Bankswitch
 	pop de
 .notMinimize
+	;;;from chatot4444
+    ld a, [de]
+    cp SKULL_BASH
+    jr z, .applyBadgeBoostsAndStatusPenalties
 	call PlayCurrentMoveAnimation
 	ld a, [de]
 	cp MINIMIZE
@@ -572,7 +573,7 @@ StatModifierDownEffect:
 	cp ATTACK_DOWN_SIDE_EFFECT
 	jr c, .nonSideEffect
 	call BattleRandom
-	cp 33 percent + 1 ; chance for side effects
+	cp 10 percent + 1 ; chance for side effects
 	jp nc, CantLowerAnymore
 	ld a, [de]
 	sub ATTACK_DOWN_SIDE_EFFECT ; map each stat to 0-3
@@ -977,7 +978,7 @@ TwoToFiveAttacksEffect:
 	ld [bc], a
 	ret
 .twineedle
-	ld a, TWINEEDLE_POISON_EFFECT
+	ld a, POISON_SIDE_EFFECT1
 	ld [hl], a ; set Twineedle's effect to poison effect
 	jr .saveNumberOfHits
 
@@ -1040,7 +1041,22 @@ ChargeEffect:
 	ld a, [de]
 	ld [wChargeMoveNum], a
 	ld hl, ChargeMoveEffectText
-	jp PrintText
+;    jp PrintText
+	;;added code from Chatot4444
+	cp SKULL_BASH
+    jp nz, PrintText
+	push de
+	call PrintText
+    pop de
+    inc de
+    ld a, DEFENSE_UP1_EFFECT
+    ld [de], a
+    push de
+    call StatModifierUpEffect
+    pop de
+    ld a, CHARGE_EFFECT
+    ld [de], a
+    ret
 
 ChargeMoveEffectText:
 	text_far _ChargeMoveEffectText
