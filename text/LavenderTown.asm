@@ -4,17 +4,20 @@ _LavenderTownLittleGirlDoYouBelieveInGhostsText::
 	done
 
 _LavenderTownLittleGirlSoThereAreBelieversText::
-	text "Really? So there"
-	line "are believers..."
+	text "Really? I have a"
+	line "friend that saw"
+	cont "an angry PRIMEAPE"
+	cont "turn into a GHOST!"
 	done
 
 _LavenderTownLittleGirlHaHaGuessNotText::
-	text "Hahaha, I guess"
-	line "not."
+	text "I knew my friend"
+	line "was lying!"
 
-	para "That white hand"
-	line "on your shoulder,"
-	cont "it's not real."
+	para "He told me, that"
+	line "he saw a really"
+	cont "angry PRIMEAPE"
+	cont "turn into a GHOST!"
 	done
 
 _LavenderTownCooltrainerMText::
