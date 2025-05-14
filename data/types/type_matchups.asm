@@ -102,4 +102,10 @@ TypeEffects:
         db DRAGON,       FAIRY,        NO_EFFECT
         db BUG,          FAIRY,        NOT_VERY_EFFECTIVE
         db FIGHTING,     FAIRY,        NOT_VERY_EFFECTIVE
+        db STEEL,        ROCK,         SUPER_EFFECTIVE
+        db STEEL,        FAIRY,        SUPER_EFFECTIVE
+        db STEEL,        ICE,          SUPER_EFFECTIVE
+        DB FAIRY,        DRAGON,       SUPER_EFFECTIVE
+        DB FAIRY,        DARK,         SUPER_EFFECTIVE
+        DB FAIRY,        FIGHTING,     SUPER_EFFECTIVE
         db -1 ; end                
