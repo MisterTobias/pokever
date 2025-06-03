@@ -166,7 +166,7 @@ Moves:
 	move EXPLOSION,    EXPLODE_EFFECT,             125, NORMAL,       100,  5 ;done (is halved def working?)
 	move FURY_SWIPES,  TWO_TO_FIVE_ATTACKS_EFFECT,  18, NORMAL,        80, 15 ;done
 	move BONEMERANG,   ATTACK_TWICE_EFFECT,         50, GROUND,        90, 10 ;done
-	move REST,         HEAL_EFFECT,                  0, PSYCHIC_TYPE, 100, 10 ;done (does it turn the user to asleep?)
+	move REST,         HEAL_EFFECT,                  0, PSYCHIC_TYPE, 100,  5 ;done (does it turn the user to asleep?)
 	move ROCK_SLIDE,   FLINCH_SIDE_EFFECT2,         75, ROCK,          90, 10 ;done
 	move HYPER_FANG,   FLINCH_SIDE_EFFECT1,         80, NORMAL,        90, 15 ;done
 	move SHARPEN,      ATTACK_UP1_EFFECT,            0, NORMAL,       100, 30 ;done

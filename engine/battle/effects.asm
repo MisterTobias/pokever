@@ -30,7 +30,7 @@ SleepEffect:
 	and a
 	jp z, .sleepEffect
 	ld de, wBattleMonStatus
-	ld bc, wPlayerBattleStatus2
+	ld bc, wPlayerBattleStatus2	
 
 .sleepEffect
 	ld a, [bc]
@@ -58,8 +58,9 @@ SleepEffect:
 .setSleepCounter
 ; set target's sleep counter to a random number between 1 and 7
 	call BattleRandom
-	and $7
+	and $3
 	jr z, .setSleepCounter
+	inc a
 	ld [de], a
 	call PlayCurrentMoveAnimation2
 	ld hl, FellAsleepText
