@@ -24,21 +24,42 @@ _JumpMoveEffect:
 INCLUDE "data/moves/effects_pointers.asm"
 
 SleepEffect:
-	ld de, wEnemyMonStatus
+	ld de, wEnemyMonType2
 	ld bc, wEnemyBattleStatus2
+	ld hl, wPlayerMoveType
 	ldh a, [hWhoseTurn]
 	and a
 	jp z, .sleepEffect
-	ld de, wBattleMonStatus
-	ld bc, wPlayerBattleStatus2	
-
+	ld de, wBattleMonType2
+	ld bc, wPlayerBattleStatus2
+	ld hl, wEnemyMoveType
 .sleepEffect
+	call CheckTargetSubstitute ; test bit 4 of d063/d068 flags [target has substitute flag]
+	jr nz, .didntAffect; jump if they have a substitute, can't effect them
+	ld a, [hl]   ; if using a grass move, check if target is grass type
+	cp GRASS
+	jr nz, .notGrass
+	ld l, a
+	ld a, [de]
+	cp l
+	jp z, PrintDoesntAffectText
+	dec de
+	ld a, [de]
+	cp l
+	jp z, PrintDoesntAffectText
+	inc de
+.notGrass
+	dec de
+	dec de
+	ld a, [de] ; dont check recharge if already statused
+	and a
+	jr nz, .skipRecharge
 	ld a, [bc]
 	bit NEEDS_TO_RECHARGE, a ; does the target need to recharge? (hyper beam)
 	res NEEDS_TO_RECHARGE, a ; target no longer needs to recharge
 	ld [bc], a
 	jr nz, .setSleepCounter ; if the target had to recharge, all hit tests will be skipped
-	                        ; including the event where the target already has another status
+.skipRecharge
 	ld a, [de]
 	ld b, a
 	and $7
@@ -56,7 +77,7 @@ SleepEffect:
 	and a
 	jr nz, .didntAffect
 .setSleepCounter
-; set target's sleep counter to a random number between 1 and 7
+; set target's sleep counter to a random number between 1 and 3
 	call BattleRandom
 	and $3
 	jr z, .setSleepCounter
