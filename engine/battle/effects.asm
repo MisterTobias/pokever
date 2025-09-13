@@ -253,7 +253,7 @@ FreezeBurnParalyzeEffect:
 ; .paralyze1
 	ld a, 1 << PAR
 	ld [wEnemyMonStatus], a
-	call QuarterSpeedDueToParalysis ; quarter speed of affected mon
+	call HalveSpeedDueToParalysis ; halve speed of affected mon
 	ld a, ENEMY_HUD_SHAKE_ANIM
 	call PlayBattleAnimation
 	jp PrintMayNotAttackText ; print paralysis text
@@ -306,7 +306,7 @@ FreezeBurnParalyzeEffect:
 ; .paralyze2
 	ld a, 1 << PAR
 	ld [wBattleMonStatus], a
-	call QuarterSpeedDueToParalysis
+	call HalveSpeedDueToParalysis
 	jp PrintMayNotAttackText
 .burn2
 	ld a, 1 << BRN
@@ -526,7 +526,7 @@ UpdateStatDone:
 	call PrintText
 
 ; these shouldn't be here
-	call QuarterSpeedDueToParalysis ; apply speed penalty to the player whose turn is not, if it's paralyzed
+	call HalveSpeedDueToParalysis ; apply speed penalty to the player whose turn is not, if it's paralyzed
 	jp HalveAttackDueToBurn ; apply attack penalty to the player whose turn is not, if it's burned
 
 RestoreOriginalStatModifier:
@@ -730,7 +730,7 @@ UpdateLoweredStatDone:
 ; These where probably added given that a stat-down move affecting speed or attack will override
 ; the stat penalties from paralysis and burn respectively.
 ; But they are always called regardless of the stat affected by the stat-down move.
-	call QuarterSpeedDueToParalysis
+	call HalveSpeedDueToParalysis
 	jp HalveAttackDueToBurn
 
 CantLowerAnymore_Pop:
