@@ -4233,6 +4233,17 @@ GetDamageVarsForPlayerAttack:
 	cp SPECIAL ; types >= SPECIAL are all special
 	jr nc, .specialAttack
 .physicalAttack
+	dec hl;
+	dec hl;
+	dec hl; hl = wPlayerMoveNum
+	ld a, [hl]
+	cp STOMP
+	jr nz, .notStomp
+	ld a, [wEnemyMonMinimized]
+	and a
+	jr z, .notStomp
+	sla d  ; if using stomp and opponent is minimized, double base power
+.notStomp
 	ld hl, wEnemyMonDefense
 	ld a, [hli]
 	ld b, a
@@ -4307,8 +4318,11 @@ GetDamageVarsForPlayerAttack:
 	rr c
 	srl b
 	rr c
-; defensive stat can actually end up as 0, leading to a division by 0 freeze during damage calculation
-; hl /= 4 (scale player's offensive stat)
+	ld a, c ;fixes the divide by zero issue
+	or b
+	jr nz, .goToOffense
+	inc c
+.goToOffense
 	srl h
 	rr l
 	srl h
@@ -4346,6 +4360,17 @@ GetDamageVarsForEnemyAttack:
 	cp SPECIAL ; types >= SPECIAL are all special
 	jr nc, .specialAttack
 .physicalAttack
+	dec hl
+	dec hl
+	dec hl ;hl = wEnemyMoveNum
+	ld a, [hl]
+	cp STOMP
+	jr nz, .notStomp
+	ld a, [wPlayerMonMinimized]
+	and a
+	jr z, .notStomp
+	sla d  ; if using stomp and player is minimized, double base power
+.notStomp
 	ld hl, wBattleMonDefense
 	ld a, [hli]
 	ld b, a
@@ -5478,6 +5503,14 @@ MoveHitTest:
 	and a
 	jr nz, .enemyTurn
 .playerTurn
+; if using stomp and opponent is minimized, never miss
+	ld a, [wPlayerMoveNum]
+	cp STOMP
+	jr nz, .notStomp
+	ld a, [wEnemyMonMinimized]
+	and a
+	ret nz
+.notStomp
 ; this checks if the move effect is disallowed by mist
 	ld a, [wPlayerMoveEffect]
 	cp ATTACK_DOWN1_EFFECT
@@ -5505,6 +5538,14 @@ MoveHitTest:
 	ret nz ; if so, always hit regardless of accuracy/evasion
 	jr .calcHitChance
 .enemyTurn
+	; if using stomp and player is minimized, never miss
+	ld a, [wPlayerMoveNum]
+	cp STOMP
+	jr nz, .notStomp2
+	ld a, [wPlayerMonMinimized]
+	and a
+	ret nz
+.notStomp2
 	ld a, [wEnemyMoveEffect]
 	cp ATTACK_DOWN1_EFFECT
 	jr c, .skipPlayerMistCheck
