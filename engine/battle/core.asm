@@ -4236,11 +4236,12 @@ GetDamageVarsForPlayerAttack:
 	dec hl;
 	dec hl;
 	dec hl; hl = wPlayerMoveNum
+	ld a, [hl]
 	cp STOMP
 	jr nz, .notStomp
 	ld a, [wEnemyMonMinimized]
 	and a
-	jr nz, .notStomp
+	jr z, .notStomp
 	sla d  ; if using stomp and opponent is minimized, double base power
 .notStomp
 	ld hl, wEnemyMonDefense
@@ -4251,13 +4252,6 @@ GetDamageVarsForPlayerAttack:
 	bit HAS_REFLECT_UP, a ; check for Reflect
 	jr z, .physicalAttackCritCheck
 ; if the enemy has used Reflect, double the enemy's defense
-	ld a, b
-	cp $2
-	jr c, .reflectWorks ;if defense before reflect is > 512 then set defense after reflect to 1023
-	ld b, $3
-	ld c, $F
-	jr .physicalAttackCritCheck
-.reflectWorks
 	sla c
 	rl b
 .physicalAttackCritCheck
@@ -4288,13 +4282,6 @@ GetDamageVarsForPlayerAttack:
 	bit HAS_LIGHT_SCREEN_UP, a ; check for Light Screen
 	jr z, .specialAttackCritCheck
 ; if the enemy has used Light Screen, double the enemy's special
-	ld a, b
-	cp $2
-	jr c, .lightScreenWorks ;if special before light screen is > 512 then set special after reflect to 1023
-	ld b, $3
-	ld c, $F
-	jr .specialAttackCritCheck
-.lightScreenWorks
 	sla c
 	rl b
 ; reflect and light screen boosts do not cap the stat at MAX_STAT_VALUE, so weird things will happen during stats scaling
@@ -4376,11 +4363,12 @@ GetDamageVarsForEnemyAttack:
 	dec hl
 	dec hl
 	dec hl ;hl = wEnemyMoveNum
+	ld a, [hl]
 	cp STOMP
 	jr nz, .notStomp
 	ld a, [wPlayerMonMinimized]
 	and a
-	jr nz, .notStomp
+	jr z, .notStomp
 	sla d  ; if using stomp and player is minimized, double base power
 .notStomp
 	ld hl, wBattleMonDefense
@@ -5516,7 +5504,7 @@ MoveHitTest:
 	jr nz, .enemyTurn
 .playerTurn
 ; if using stomp and opponent is minimized, never miss
-	ld a, [de]
+	ld a, [wPlayerMoveNum]
 	cp STOMP
 	jr nz, .notStomp
 	ld a, [wEnemyMonMinimized]
@@ -5551,7 +5539,7 @@ MoveHitTest:
 	jr .calcHitChance
 .enemyTurn
 	; if using stomp and player is minimized, never miss
-	ld a, [de]
+	ld a, [wPlayerMoveNum]
 	cp STOMP
 	jr nz, .notStomp2
 	ld a, [wPlayerMonMinimized]
