@@ -171,7 +171,7 @@ Moves:
 	move HYPER_FANG,   FLINCH_SIDE_EFFECT1,         80, NORMAL,        90, 15 ;done
 	move SHARPEN,      ATTACK_UP1_EFFECT,            0, NORMAL,       100, 30 ;done
 	move CONVERSION,   CONVERSION_EFFECT,            0, NORMAL,       100, 30 ;(need to check the effect)
-	move TRI_ATTACK,   NO_ADDITIONAL_EFFECT,        80, NORMAL,       100, 10 ;(need to check the effect)
+	move TRI_ATTACK,   TRI_ATTACK_EFFECT,           80, NORMAL,       100, 10 ; marcelnote - changed from NO_ADDITIONAL_EFFECT(need to check the effect)
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,        90, 10 ;done
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       100, 20 ;done
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       100, 10 ;done (need to test the effect)
