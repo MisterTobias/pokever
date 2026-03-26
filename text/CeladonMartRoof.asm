@@ -75,8 +75,12 @@ _CeladonMartRoofLittleGirlYayLemonadeText::
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM49Text::
-	text "<PLAYER> received"
-	line "TM49!@"
+	text "TM49 contains"
+	line "TRI ATTACK!"
+
+	para "It can paralyze," ; marcelnote - new explanation for new TRI_ATTACK_EFFECT
+	line "freeze or burn"
+	cont "the target!@"
 	text_end
 
 _CeladonMartRoofLittleGirlTM49ExplanationText::
